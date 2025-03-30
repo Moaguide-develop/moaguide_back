@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Add SSH key
-        run: echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/ssh_key && chmod 600 /tmp/ssh_key
+        run: echo "${{ secrets.DEVELOP_KEY }}" > /tmp/ssh_key && chmod 600 /tmp/ssh_key
 
       - name: Login to Docker Hub on EC2 instance
         run: |
