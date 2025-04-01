@@ -1,0 +1,29 @@
+name: CD_develop
+
+on:
+  workflow_run:
+    workflows: ["CI_develop"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add SSH key
+        run: echo "${{ secrets.DEVELOP_KEY }}" > /tmp/ssh_key && chmod 600 /tmp/ssh_key
+
+      - name: Login to Docker Hub on EC2 instance
+        run: |
+          ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -o ConnectTimeout=10 ec2-user@${{ secrets.DEVELOP_SERVER_IP }} "echo '${{ secrets.DOCKERHUB_PW }}' | docker login -u '${{ secrets.DOCKERHUB_USERNAME }}' --password-stdin"
+
+      - name: Pull latest image and deploy new version
+        run: |
+          ssh -i /tmp/ssh_key -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -o ConnectTimeout=10 ec2-user@${{ secrets.DEVELOP_SERVER_IP }} "
+            docker pull moaguide/moaguide:back_last_develop
+            cd /home/ec2-user
+            docker-compose stop ec2-user-local-1
+            docker-compose -f docker-compose-back.yml up -d --no-deps
+          "
