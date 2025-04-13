@@ -5,7 +5,7 @@ import static com.moaguide.refactor.util.EmptyCheckUtil.isListEmpty;
 import static com.moaguide.refactor.util.TimeUtil.getMinusLocalDate;
 
 import com.moaguide.refactor.art.dto.ArtDetailDto;
-import com.moaguide.refactor.building.dto.BuildingReponseDto;
+import com.moaguide.refactor.building.dto.base.BuildingReponseDto;
 import com.moaguide.refactor.contents.dto.ContentDetailDto;
 import com.moaguide.refactor.cow.dto.HanwooDetailDto;
 import com.moaguide.refactor.music.dto.MusicReponseDto;
@@ -64,14 +64,14 @@ public class ProductDetailService {
 
 	public ResponseEntity<Object> musicDetail(String productId, String nickname) {
 		LocalDate year = getMinusLocalDate(1);
-        StoredProcedureQuery query = entityManager
-            .createStoredProcedureQuery("music_detail")
-            .registerStoredProcedureParameter("in_Product_Id", String.class, ParameterMode.IN)
-            .registerStoredProcedureParameter("nickname", String.class, ParameterMode.IN)
-            .registerStoredProcedureParameter("year", int.class, ParameterMode.IN)
-            .setParameter("in_Product_Id", productId)
-            .setParameter("nickname", nickname)
-            .setParameter("year", year);
+		StoredProcedureQuery query = entityManager
+			.createStoredProcedureQuery("music_detail")
+			.registerStoredProcedureParameter("in_Product_Id", String.class, ParameterMode.IN)
+			.registerStoredProcedureParameter("nickname", String.class, ParameterMode.IN)
+			.registerStoredProcedureParameter("year", int.class, ParameterMode.IN)
+			.setParameter("in_Product_Id", productId)
+			.setParameter("nickname", nickname)
+			.setParameter("year", year);
 
 		List<Object[]> resultList = query.getResultList();
 

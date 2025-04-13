@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.base;
 
 
 import com.moaguide.refactor.building.entity.LandRegistry;

@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.service.graph;
 
-import com.moaguide.refactor.building.dto.VacancyrateDto;
+import com.moaguide.refactor.building.dto.graph.VacancyrateDto;
 import com.moaguide.refactor.building.repository.VacancyRateRepository;
 import java.util.HashMap;
 import java.util.List;

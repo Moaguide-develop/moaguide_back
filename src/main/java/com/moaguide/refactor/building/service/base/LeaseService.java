@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.service.base;
 
-import com.moaguide.refactor.building.dto.LeaseDto;
+import com.moaguide.refactor.building.dto.base.LeaseDto;
 import com.moaguide.refactor.building.repository.LeaseRepository;
 import java.util.List;
 import lombok.AllArgsConstructor;

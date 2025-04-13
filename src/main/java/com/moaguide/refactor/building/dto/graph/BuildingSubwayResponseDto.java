@@ -1,11 +1,8 @@
-package com.moaguide.refactor.building.dto;
-
-import com.moaguide.refactor.building.dto.SubwayDto;
-
-import lombok.Getter;
+package com.moaguide.refactor.building.dto.graph;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
 
 @Getter
 public class BuildingSubwayResponseDto {

@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.service.sub;
 
-import com.moaguide.refactor.building.dto.NearSubwayDto;
+import com.moaguide.refactor.building.dto.sub.NearSubwayDto;
 import com.moaguide.refactor.building.repository.near.NearSubwayRepository;
 import java.util.List;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,7 @@
-package com.moaguide.refactor.building.dto;
-
-import lombok.Getter;
+package com.moaguide.refactor.building.dto.sub;
 
 import java.util.List;
+import lombok.Getter;
 
 @Getter
 

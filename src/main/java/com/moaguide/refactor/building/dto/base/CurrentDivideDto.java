@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.base;
 
 
 import java.sql.Date;

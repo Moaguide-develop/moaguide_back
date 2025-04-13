@@ -1,6 +1,6 @@
 package com.moaguide.refactor.product.repository;
 
-import com.moaguide.refactor.building.dto.BuildingReponseDto;
+import com.moaguide.refactor.building.dto.base.BuildingReponseDto;
 import com.moaguide.refactor.product.dto.SummaryIssupriceCustomDto;
 import com.moaguide.refactor.product.entity.Product;
 import java.sql.Date;

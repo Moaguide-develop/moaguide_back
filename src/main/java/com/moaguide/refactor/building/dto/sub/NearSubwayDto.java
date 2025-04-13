@@ -1,13 +1,12 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.sub;
 
 
+import java.util.Arrays;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Arrays;
-import java.util.List;
 
 @Getter
 @NoArgsConstructor

@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.repository.subway;
 
-import com.moaguide.refactor.building.dto.SubwayDto;
+import com.moaguide.refactor.building.dto.graph.SubwayDto;
 import com.moaguide.refactor.building.entity.subway.SubwayDay;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.query.Procedure;

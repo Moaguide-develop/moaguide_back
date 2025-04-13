@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.entity.subway;
 
 
-import com.moaguide.refactor.building.dto.SubwayDto;
+import com.moaguide.refactor.building.dto.graph.SubwayDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

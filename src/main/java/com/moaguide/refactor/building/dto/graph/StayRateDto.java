@@ -1,10 +1,9 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.graph;
 
+import java.sql.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.sql.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor

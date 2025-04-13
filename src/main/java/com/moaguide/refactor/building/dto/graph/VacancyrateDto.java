@@ -1,11 +1,11 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.graph;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
-public class RentDto {
+@AllArgsConstructor
+public class VacancyrateDto {
 
 	private int year;
 	private int quarter;

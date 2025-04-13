@@ -1,11 +1,10 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.base;
 
 
+import java.beans.ConstructorProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.beans.ConstructorProperties;
 
 @Getter
 @NoArgsConstructor

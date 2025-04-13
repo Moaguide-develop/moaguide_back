@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository;
 
 
-import com.moaguide.refactor.building.dto.BuildingReponseDto;
+import com.moaguide.refactor.building.dto.base.BuildingReponseDto;
 import com.moaguide.refactor.building.entity.BuildingDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.query.Procedure;

@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.service;
 
+import com.moaguide.refactor.building.dto.base.BuildingReponseDto;
 import com.moaguide.refactor.building.repository.BuildingDetailRepository;
-import com.moaguide.refactor.building.dto.BuildingReponseDto;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

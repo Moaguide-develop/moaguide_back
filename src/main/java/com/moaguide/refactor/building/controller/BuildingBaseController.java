@@ -1,9 +1,9 @@
 package com.moaguide.refactor.building.controller;
 
-import com.moaguide.refactor.building.dto.BuildingBaseDto;
-import com.moaguide.refactor.building.dto.BuildingBaseResponseDto;
-import com.moaguide.refactor.building.dto.LeaseDto;
-import com.moaguide.refactor.building.dto.LocationDto;
+import com.moaguide.refactor.building.dto.base.BuildingBaseDto;
+import com.moaguide.refactor.building.dto.base.BuildingBaseResponseDto;
+import com.moaguide.refactor.building.dto.base.LeaseDto;
+import com.moaguide.refactor.building.dto.base.LocationDto;
 import com.moaguide.refactor.building.service.base.LandRegistryService;
 import com.moaguide.refactor.building.service.base.LeaseService;
 import com.moaguide.refactor.building.service.base.LocationService;
@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 건물 기본 정보 컨트롤러
+ */
 @RestController
 @AllArgsConstructor
 @RequestMapping("/detail/building")

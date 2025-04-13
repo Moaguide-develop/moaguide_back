@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.repository;
 
-import com.moaguide.refactor.building.dto.PopulationDto;
+import com.moaguide.refactor.building.dto.graph.PopulationDto;
 import com.moaguide.refactor.building.entity.Population;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
@@ -11,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 public interface PopulationRepository extends JpaRepository<Population, Long> {
 
 	@Query(
-		"select new com.moaguide.refactor.building.dto.PopulationDto(p.weekDay ,p.total ,p.age0 ,p.age10 ,p.age20,p.age30,p.age40,p.age50,p.age60,p.age70,p.man,p.girl )"
+		"select new com.moaguide.refactor.building.dto.graph.PopulationDto(p.weekDay ,p.total ,p.age0 ,p.age10 ,p.age20,p.age30,p.age40,p.age50,p.age60,p.age70,p.man,p.girl )"
 			+
 			"FROM Population p,BuildingDetail b " +
 			"where p.districts.districtsId = b.districtsId.districtsId and b.productId.productId = :id "

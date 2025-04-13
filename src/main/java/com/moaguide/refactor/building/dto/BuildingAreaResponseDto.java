@@ -1,5 +1,6 @@
 package com.moaguide.refactor.building.dto;
 
+import com.moaguide.refactor.building.dto.base.LocationDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,9 +1,9 @@
 package com.moaguide.refactor.building.controller;
 
-import com.moaguide.refactor.building.dto.BuildingSubResponseDto;
-import com.moaguide.refactor.building.dto.BusinessAreaDto;
-import com.moaguide.refactor.building.dto.NearBusDto;
-import com.moaguide.refactor.building.dto.NearSubwayDto;
+import com.moaguide.refactor.building.dto.sub.BuildingSubResponseDto;
+import com.moaguide.refactor.building.dto.sub.BusinessAreaDto;
+import com.moaguide.refactor.building.dto.sub.NearBusDto;
+import com.moaguide.refactor.building.dto.sub.NearSubwayDto;
 import com.moaguide.refactor.building.service.sub.BusinessAreaService;
 import com.moaguide.refactor.building.service.sub.NearBusService;
 import com.moaguide.refactor.building.service.sub.NearSubwayService;

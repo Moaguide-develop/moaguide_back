@@ -1,6 +1,5 @@
-package com.moaguide.refactor.building.dto;
+package com.moaguide.refactor.building.dto.graph;
 
-import com.moaguide.refactor.building.dto.SubwayTimeDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
