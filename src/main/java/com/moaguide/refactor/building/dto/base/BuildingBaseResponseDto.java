@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.dto.base;
 
 
-import com.moaguide.refactor.building.entity.LandRegistry;
+import com.moaguide.refactor.building.entity.base.LandRegistry;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

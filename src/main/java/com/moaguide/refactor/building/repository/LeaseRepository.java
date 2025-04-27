@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository;
 
 import com.moaguide.refactor.building.dto.base.LeaseDto;
-import com.moaguide.refactor.building.entity.Lease;
+import com.moaguide.refactor.building.entity.base.Lease;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

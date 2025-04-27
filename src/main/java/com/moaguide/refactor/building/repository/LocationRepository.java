@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository;
 
 import com.moaguide.refactor.building.dto.base.LocationDto;
-import com.moaguide.refactor.building.entity.Location;
+import com.moaguide.refactor.building.entity.base.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

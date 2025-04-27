@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.entity;
+package com.moaguide.refactor.building.entity.base;
 
 import com.moaguide.refactor.building.dto.base.BuildingBaseDto;
 import com.moaguide.refactor.product.entity.Product;
