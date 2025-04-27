@@ -1,6 +1,6 @@
 package com.moaguide.refactor.building.dto.base;
 
-import com.moaguide.refactor.building.entity.BuildingDetail;
+import com.moaguide.refactor.building.entity.base.BuildingDetail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

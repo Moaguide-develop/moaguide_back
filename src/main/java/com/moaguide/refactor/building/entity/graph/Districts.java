@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.entity;
+package com.moaguide.refactor.building.entity.graph;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

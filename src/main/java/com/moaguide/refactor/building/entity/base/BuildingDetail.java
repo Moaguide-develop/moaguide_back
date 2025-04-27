@@ -1,6 +1,7 @@
-package com.moaguide.refactor.building.entity;
+package com.moaguide.refactor.building.entity.base;
 
 import com.moaguide.refactor.building.dto.base.BuildingReponseDto;
+import com.moaguide.refactor.building.entity.graph.Districts;
 import com.moaguide.refactor.product.entity.Product;
 import jakarta.persistence.Column;
 import jakarta.persistence.ColumnResult;
