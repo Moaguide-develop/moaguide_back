@@ -2,8 +2,6 @@ package com.moaguide.refactor.product.service;
 
 import com.moaguide.refactor.product.dto.DetailTransactionResponseDto;
 import com.moaguide.refactor.product.dto.TransactionDto;
-import com.moaguide.refactor.product.repository.HistoryRepository;
-import com.moaguide.refactor.product.repository.TransactionRepository;
 import jakarta.persistence.EntityManager;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -18,8 +16,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TransactionService {
 
-	private final TransactionRepository transactionRepository;
-	private final HistoryRepository historyRepository;
 	private final EntityManager entityManager;
 
 	public DetailTransactionResponseDto getTransactionData(String productId, int month) {

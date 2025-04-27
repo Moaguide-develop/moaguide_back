@@ -63,3 +63,7 @@ jar {
         )
     }
 }
+
+test {
+    useJUnitPlatform()
+}
