@@ -2,7 +2,7 @@ package com.moaguide.refactor.building.repository;
 
 
 import com.moaguide.refactor.building.dto.sub.BusinessAreaDto;
-import com.moaguide.refactor.building.entity.BusinessArea;
+import com.moaguide.refactor.building.entity.sub.BusinessArea;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
