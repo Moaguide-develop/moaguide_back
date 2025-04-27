@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository;
 
 import com.moaguide.refactor.building.dto.graph.PopulationDto;
-import com.moaguide.refactor.building.entity.Population;
+import com.moaguide.refactor.building.entity.graph.Population;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository;
 
 import com.moaguide.refactor.building.dto.graph.LandDto;
-import com.moaguide.refactor.building.entity.LandPrice;
+import com.moaguide.refactor.building.entity.graph.LandPrice;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

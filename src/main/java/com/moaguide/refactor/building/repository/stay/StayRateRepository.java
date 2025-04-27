@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.repository.stay;
 
 import com.moaguide.refactor.building.dto.graph.StayRateDto;
-import com.moaguide.refactor.building.entity.stayday.StayRate;
+import com.moaguide.refactor.building.entity.graph.StayRate;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

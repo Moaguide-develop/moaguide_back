@@ -1,9 +1,9 @@
 package com.moaguide.refactor.building.repository;
 
 
-import com.moaguide.refactor.building.dto.graph.TypeDto;
 import com.moaguide.refactor.building.dto.graph.RentDto;
-import com.moaguide.refactor.building.entity.Rent;
+import com.moaguide.refactor.building.dto.graph.TypeDto;
+import com.moaguide.refactor.building.entity.graph.Rent;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
