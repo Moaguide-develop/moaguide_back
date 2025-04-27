@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository;
+package com.moaguide.refactor.building.repository.base;
 
 
 import com.moaguide.refactor.building.dto.base.BuildingBaseDto;

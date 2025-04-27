@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository;
+package com.moaguide.refactor.building.repository.graph;
 
 import com.moaguide.refactor.building.entity.graph.Districts;
 import org.springframework.data.jpa.repository.JpaRepository;

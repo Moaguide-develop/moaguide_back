@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.service.base;
 
 import com.moaguide.refactor.building.dto.base.BuildingBaseDto;
-import com.moaguide.refactor.building.repository.LandRegistryRepository;
+import com.moaguide.refactor.building.repository.base.LandRegistryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

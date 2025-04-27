@@ -2,7 +2,7 @@ package com.moaguide.refactor.building.service.graph;
 
 import com.moaguide.refactor.building.dto.graph.RentDto;
 import com.moaguide.refactor.building.dto.graph.TypeDto;
-import com.moaguide.refactor.building.repository.RentRepository;
+import com.moaguide.refactor.building.repository.graph.RentRepository;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

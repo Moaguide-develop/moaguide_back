@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository.subway;
+package com.moaguide.refactor.building.repository.graph.subway;
 
 import com.moaguide.refactor.building.dto.graph.SubwayDto;
 import com.moaguide.refactor.building.entity.graph.SubwayMonth;

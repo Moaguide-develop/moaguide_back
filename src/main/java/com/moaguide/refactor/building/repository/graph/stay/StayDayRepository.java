@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository.stay;
+package com.moaguide.refactor.building.repository.graph.stay;
 
 import com.moaguide.refactor.building.dto.graph.StayDayDto;
 import com.moaguide.refactor.building.entity.graph.StayDay;

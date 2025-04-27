@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository;
+package com.moaguide.refactor.building.repository.sub;
 
 
 import com.moaguide.refactor.building.dto.sub.BusinessAreaDto;

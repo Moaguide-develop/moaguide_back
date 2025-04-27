@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.service.graph;
 
 import com.moaguide.refactor.building.dto.graph.PopulationDto;
-import com.moaguide.refactor.building.repository.PopulationRepository;
+import com.moaguide.refactor.building.repository.graph.PopulationRepository;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package com.moaguide.refactor.building.repository.near;
+package com.moaguide.refactor.building.repository.sub;
 
 import com.moaguide.refactor.building.dto.sub.NearSubwayDto;
 import com.moaguide.refactor.building.entity.sub.NearSubway;

@@ -1,7 +1,7 @@
 package com.moaguide.refactor.building.service.sub;
 
 import com.moaguide.refactor.building.dto.sub.BusinessAreaDto;
-import com.moaguide.refactor.building.repository.BusinessAreaRepository;
+import com.moaguide.refactor.building.repository.sub.BusinessAreaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

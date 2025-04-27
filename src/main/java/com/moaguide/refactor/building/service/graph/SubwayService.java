@@ -2,8 +2,8 @@ package com.moaguide.refactor.building.service.graph;
 
 import com.moaguide.refactor.building.dto.graph.BuildingSubwayResponseDto;
 import com.moaguide.refactor.building.dto.graph.SubwayDto;
-import com.moaguide.refactor.building.repository.subway.SubwayDayRepository;
-import com.moaguide.refactor.building.repository.subway.SubwayMonthRepository;
+import com.moaguide.refactor.building.repository.graph.subway.SubwayDayRepository;
+import com.moaguide.refactor.building.repository.graph.subway.SubwayMonthRepository;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
