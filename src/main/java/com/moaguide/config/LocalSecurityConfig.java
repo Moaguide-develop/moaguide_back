@@ -5,12 +5,11 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.moaguide.config.handler.CustomAccessDeniedHandler;
 import com.moaguide.config.handler.CustomLogoutSuccessHandler;
-import com.moaguide.config.handler.OAuth2SuccessHandler;
 import com.moaguide.jwt.JWTFilter;
 import com.moaguide.jwt.JWTUtil;
 import com.moaguide.security.LocalLoginFilter;
 import com.moaguide.service.CookieService;
-import com.moaguide.service.CustomOAuth2UserService;
+import java.util.Arrays;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,8 +30,6 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import java.util.Arrays;
-
 @Configuration
 @EnableWebSecurity
 @AllArgsConstructor
@@ -42,7 +39,7 @@ public class LocalSecurityConfig {
     private final AuthenticationConfiguration authenticationConfiguration;
     private final JWTUtil jwtUtil;
     private final CookieService cookieService;
-    private final CustomOAuth2UserService customOAuth2UserService;
+//    private final CustomOAuth2UserService customOAuth2UserService;
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
@@ -77,13 +74,13 @@ public class LocalSecurityConfig {
         // 특정 경로에 대해서만 JWTFilter 적용
         http.
                 addFilterAt(new LocalLoginFilter(authenticationManager(authenticationConfiguration),jwtUtil,cookieService), UsernamePasswordAuthenticationFilter.class);
-        http
-                .oauth2Login(oauth2 -> oauth2
-                        .userInfoEndpoint(userInfoEndpointConfig -> userInfoEndpointConfig
-                                .userService(customOAuth2UserService) // 사용자 정보 가져오기
-                        )
-                        .successHandler(new OAuth2SuccessHandler(jwtUtil,cookieService)) // OAuth2 성공 핸들러 직접 호출
-                );
+//        http
+//                .oauth2Login(oauth2 -> oauth2
+//                        .userInfoEndpoint(userInfoEndpointConfig -> userInfoEndpointConfig
+//                                .userService(customOAuth2UserService) // 사용자 정보 가져오기
+//                        )
+//                        .successHandler(new OAuth2SuccessHandler(jwtUtil,cookieService)) // OAuth2 성공 핸들러 직접 호출
+//                );
         http.
                 sessionManagement((session) -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
@@ -118,7 +115,7 @@ public class LocalSecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationzSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:3000","*"));
+        configuration.setAllowedOriginPatterns(Arrays.asList("https://moaguide.com", "https://moaguide.vercel.app/","https://www.moaguide.com","https://moaguide-admin.vercel.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")); // 허용 메서드
         configuration.setAllowedHeaders(Arrays.asList("Authorization","verify", "Content-Type","cookie")); // 허용 헤더
         configuration.setExposedHeaders(Arrays.asList("Authorization","verify")); // 클라이언트가 접근할 수 있는 응답 헤더
