@@ -7,6 +7,11 @@ import com.moaguide.jwt.JWTUtil;
 import com.moaguide.service.CookieService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -14,12 +19,6 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.Map;
 
 @AllArgsConstructor
 public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
@@ -54,7 +53,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
                 String uri = UriComponentsBuilder
                         .newInstance()
                         .scheme("https")
-                        .host("moaguide.com")
+                        .host("moaguide.n-e.kr")
                         .path("/signup")
                         .queryParams(queryParams)
                         .build()
@@ -90,7 +89,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
                 String uri = UriComponentsBuilder
                         .newInstance()
                         .scheme("https")
-                        .host("moaguide.com")
+                        .host("moaguide.n-e.kr")
                         .path("/")
                         .queryParam("user", encodedJson) // JSON을 하나의 파라미터로 추가
                         .queryParam("access", accessToken)

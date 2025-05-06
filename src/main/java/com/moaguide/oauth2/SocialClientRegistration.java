@@ -1,14 +1,12 @@
 package com.moaguide.oauth2;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile({"blue","green"})
 public class SocialClientRegistration {
 
     @Value("${Oauth.naver.secretkey}")
@@ -23,7 +21,7 @@ public class SocialClientRegistration {
         return ClientRegistration.withRegistrationId("naver")
                 .clientId("QmiDAoPZrP8ao_7KZPg8")
                 .clientSecret(naverClientSecret)
-                .redirectUri("https://api.moaguide.com/login/oauth2/code/naver")
+                .redirectUri("https://moaguide.n-e.kr/login/oauth2/code/naver")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .scope("email")
                 .authorizationUri("https://nid.naver.com/oauth2.0/authorize")
@@ -51,7 +49,7 @@ public class SocialClientRegistration {
         return ClientRegistration.withRegistrationId("google")
                 .clientId("826354788321-kj10tmqge09a56v2h0dtkej4ntgc15hq.apps.googleusercontent.com")
                 .clientSecret(googleClientSecret)
-                .redirectUri("https://api.moaguide.com/login/oauth2/code/google")
+                .redirectUri("https://moaguide.n-e.kr/login/oauth2/code/google")
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .scope("email")
                 .authorizationUri("https://accounts.google.com/o/oauth2/v2/auth")

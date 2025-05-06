@@ -7,7 +7,6 @@ import com.moaguide.dto.NewDto.oauth.GoogleResponse;
 import com.moaguide.dto.NewDto.oauth.NaverResponse;
 import com.moaguide.dto.NewDto.oauth.OAuth2ResponseDto;
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-@Profile({"blue", "green"})
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private final UserRepository userRepository;
 
