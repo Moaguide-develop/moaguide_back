@@ -23,10 +23,6 @@ jobs:
         run: |
           echo "${{ secrets.DEVELOP_APPLICATION}}" > src/main/resources/application.yml
 
-      - name: Set up application-secret.yml
-        run: |
-          echo "${{ secrets.APPLICATION_SECRET}}" > src/main/resources/application-secret.yml
-
       - name: Set up application-File-MaxSize.yml
         run: |
           echo "${{ secrets.FILE_SIZE}}" >> src/main/resources/application-secret.yml
