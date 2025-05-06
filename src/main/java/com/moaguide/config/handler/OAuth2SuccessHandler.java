@@ -53,7 +53,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
                 String uri = UriComponentsBuilder
                         .newInstance()
                         .scheme("https")
-                        .host("moaguide.n-e.kr")
+                        .host("moaguide.com")
                         .path("/signup")
                         .queryParams(queryParams)
                         .build()
@@ -89,7 +89,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
                 String uri = UriComponentsBuilder
                         .newInstance()
                         .scheme("https")
-                        .host("moaguide.n-e.kr")
+                        .host("moaguide.com")
                         .path("/")
                         .queryParam("user", encodedJson) // JSON을 하나의 파라미터로 추가
                         .queryParam("access", accessToken)
