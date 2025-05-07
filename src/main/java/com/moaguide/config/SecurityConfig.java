@@ -91,7 +91,7 @@ public class SecurityConfig {
         http
                 .logout(logout -> logout
                 .logoutUrl("/logout") // 로그아웃 요청 URL
-                .deleteCookies("JSESSIONID", "refresh", "rememberMe")
+                .deleteCookies("access", "refresh", "rememberMe")
                 .logoutSuccessHandler(new CustomLogoutSuccessHandler()) // 로그아웃 성공 후 메시지 반환
 
         );
