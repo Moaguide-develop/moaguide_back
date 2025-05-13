@@ -1,34 +1,40 @@
 package com.moaguide.domain.elasticsearch.searchlog;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Profile;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
+import lombok.Setter;
 
-import java.util.Date;
-
+@Entity
+@Table(name = "search_log")
 @Getter
-@AllArgsConstructor
+@Setter
 @NoArgsConstructor
-@Document(indexName = "search-logs")
-@Profile({"blue", "green"})
+@AllArgsConstructor
 public class SearchLog {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Field(type = FieldType.Text)
+    @Column(name = "search_term", nullable = false)
     private String searchTerm;
 
+    @Column(name = "timestamp", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
 
     public SearchLog(String searchTerm, Date timestamp) {
         this.searchTerm = searchTerm;
         this.timestamp = timestamp;
     }
-
 }

@@ -1,15 +1,14 @@
 package com.moaguide.domain.product;
 
 import com.moaguide.dto.NewDto.customDto.SummaryIssupriceCustomDto;
+import java.sql.Date;
+import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
-import java.sql.Date;
-import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {
@@ -36,5 +35,19 @@ public interface ProductRepository extends JpaRepository<Product, String> {
             "AND ip.day <= :date " +
             "ORDER BY ip.day DESC")
     List<SummaryIssupriceCustomDto> findrecent(Pageable pageable,@Param("date")Date date);
+
+
+    @Query(value = """
+        SELECT 
+            p.Product_Id AS productId,
+            p.name AS name,
+            pl.platform AS platform,
+            pl.category AS category
+        FROM Product p
+        JOIN Platform pl ON p.Platform_Id = pl.Platform_Id
+        WHERE MATCH(p.name) AGAINST(:keyword IN BOOLEAN MODE)
+        LIMIT 10
+        """, nativeQuery = true)
+    List<Object[]> searchProductsRaw(@Param("keyword") String keyword);
 }
 
