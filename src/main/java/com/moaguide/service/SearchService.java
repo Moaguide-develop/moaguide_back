@@ -57,7 +57,7 @@ public class SearchService {
     // 검색어 순위 집계 메서드 (최근 24시간 기준)
 	public List<SearchRankDto> getSearchRank() {
 		OffsetDateTime now = OffsetDateTime.now(ZoneOffset.UTC);
-		OffsetDateTime last24Hours = now.minusHours(24);
+		OffsetDateTime last24Hours = now.minusHours(24*5);
 
 		List<Object[]> rawResult = searchLogRepository.findTopSearchTermsBetween(
 			Date.from(last24Hours.toInstant()),
